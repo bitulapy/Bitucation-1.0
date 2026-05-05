@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Bitucation</title>
+  <meta name="description" content="Login to Bitucation and start your Computer Science learning journey with Bitula!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body class="login-body">
+
+  <div class="login-particles" id="hero-particles"></div>
+
+  <div class="login-page">
+
+    <div class="login-left">
+      <div class="login-left-content">
+        <a href="index.html" class="login-back-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span data-i18n="login.back">Back to Home</span>
+        </a>
+        <div class="login-brand">
+          <img src="IMAGE ASSET/BITULA FULL LOGO.png" alt="Bitula" class="login-logo" />
+          <h1 class="login-brand-title" data-i18n="login.brand.title">Welcome Back!</h1>
+          <p class="login-brand-sub" data-i18n="login.brand.sub">Login and continue your learning adventure with Bitula 🌙</p>
+        </div>
+        <div class="login-char-area">
+          <img src="IMAGE ASSET/BITULA2.png" alt="Bitula" class="login-char" />
+          <div class="login-bubble">
+            <p data-i18n="login.bubble">Hey! It's been a while. Let's pick up where you left off! ✨</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-right">
+      <div class="login-form-container">
+
+        <div class="login-tabs">
+          <button class="login-tab active" id="tab-login" onclick="switchTab('login')" data-i18n="login.tab.login">Login</button>
+          <button class="login-tab" id="tab-register" onclick="switchTab('register')" data-i18n="login.tab.register">Sign Up</button>
+        </div>
+
+        <div id="form-login" class="login-form-panel">
+          <h2 class="form-title" data-i18n="login.form.title">Sign In</h2>
+          <p class="form-sub" data-i18n="login.form.sub">Enter your email and password</p>
+
+          <button class="btn-google" id="btn-google-login" onclick="showComingSoon()">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.79-.07-1.54-.19-2.27h-11.3v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/><path fill="#34A853" d="M12.255 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96h-3.98v3.09C3.515 21.3 7.565 24 12.255 24z"/><path fill="#FBBC05" d="M5.525 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62h-3.98a11.86 11.86 0 0 0 0 10.76l3.98-3.09z"/><path fill="#EA4335" d="M12.255 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C18.205 1.19 15.495 0 12.255 0c-4.69 0-8.74 2.7-10.71 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/></svg>
+            <span data-i18n="login.google">Continue with Google</span>
+          </button>
+
+          <div class="form-divider"><span data-i18n="login.or">or</span></div>
+
+          <form id="login-form" onsubmit="handleLogin(event)">
+            <div class="form-group">
+              <label for="login-email" data-i18n="login.email.label">Email</label>
+              <div class="input-wrapper">
+                <span class="input-icon">✉️</span>
+                <input type="email" id="login-email" name="email" placeholder="example@email.com" data-i18n-ph="login.email.ph" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="login-password" data-i18n="login.pw.label">Password</label>
+              <div class="input-wrapper">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" data-i18n-ph="login.pw.ph" required />
+                <button type="button" class="input-toggle-pw" onclick="togglePw('login-password', this)">👁️</button>
+              </div>
+            </div>
+            <div class="form-row">
+              <label class="checkbox-label">
+                <input type="checkbox" id="remember-me" />
+                <span data-i18n="login.remember">Remember me</span>
+              </label>
+              <a href="#" class="form-link" onclick="showComingSoon()" data-i18n="login.forgot">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="login-submit-btn">
+              <span data-i18n="login.btn">Login</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+          <div id="login-message" class="form-message"></div>
+          <p class="form-switch"><span data-i18n="login.switch">Don't have an account?</span> <a href="#" onclick="switchTab('register')" data-i18n="login.switch.link">Sign up now</a></p>
+        </div>
+
+        <div id="form-register" class="login-form-panel" style="display:none;">
+          <h2 class="form-title" data-i18n="reg.form.title">Create Account</h2>
+          <p class="form-sub" data-i18n="reg.form.sub">Join for free and start learning!</p>
+
+          <button class="btn-google" id="btn-google-register" onclick="showComingSoon()">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.79-.07-1.54-.19-2.27h-11.3v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/><path fill="#34A853" d="M12.255 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96h-3.98v3.09C3.515 21.3 7.565 24 12.255 24z"/><path fill="#FBBC05" d="M5.525 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62h-3.98a11.86 11.86 0 0 0 0 10.76l3.98-3.09z"/><path fill="#EA4335" d="M12.255 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C18.205 1.19 15.495 0 12.255 0c-4.69 0-8.74 2.7-10.71 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/></svg>
+            <span data-i18n="reg.google">Sign up with Google</span>
+          </button>
+
+          <div class="form-divider"><span data-i18n="login.or">or</span></div>
+
+          <form id="register-form" onsubmit="handleRegister(event)">
+            <div class="form-group">
+              <label for="reg-name" data-i18n="reg.name.label">Full Name</label>
+              <div class="input-wrapper">
+                <span class="input-icon">👤</span>
+                <input type="text" id="reg-name" placeholder="Your name" data-i18n-ph="reg.name.ph" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reg-email" data-i18n="login.email.label">Email</label>
+              <div class="input-wrapper">
+                <span class="input-icon">✉️</span>
+                <input type="email" id="reg-email" placeholder="example@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reg-password" data-i18n="login.pw.label">Password</label>
+              <div class="input-wrapper">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="reg-password" placeholder="Min. 8 characters" required />
+                <button type="button" class="input-toggle-pw" onclick="togglePw('reg-password', this)">👁️</button>
+              </div>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="register-submit-btn">
+              <span data-i18n="reg.btn">Create Account</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+          <div id="register-message" class="form-message"></div>
+          <p class="form-switch"><span data-i18n="reg.switch">Already have an account?</span> <a href="#" onclick="switchTab('login')" data-i18n="reg.switch.link">Login here</a></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="coming-soon-toast" class="toast" style="display:none;" data-i18n="toast.coming.soon">
+    🚀 This feature is coming soon! Stay tuned, Bitulers~
+  </div>
+
+  <script src="js/lang.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+Bitula Education (Bitucation) adalah website dari Bitula yang berisikan 
+materi pembelajaran Bitula secara gratis
+
+Materi pembelajaran Bitula merupakan = 
+- fundamental coding: logic, algorithm, data structure, dll
+- math: calculus, probability, statistics, dll
+- cs advanced topic: operating system, computer network, database, digital logic (moore, mealy), dll
+- ml & data science: neural network, deep learning, dll
+- data engineering: data pipeline, data warehouse, dll
+- cloud computing: aws, azure, gcp, dll
+- big data: hadoop, spark, dll
+
+
+Materi pembelajaran bisa disesuaikan
+
+Untuk implementasi nya: user bisa login, trus ada halaman utama
+trs ada pilihan mau belajar apa, nanti masuk ke web nya
+
+- kalo mau ganti materi lain bisa
+- untuk web nya nanti ada login, halaman utama, halaman materi, halaman profile, halaman settings
+- materi nya nanti ada sub-sub materi nya, nanti bisa diatur gitu 
+- ada login bisa menggunakan google juga
+- ada streak (seperti Duolinggo)
+
+Sistem seperti Ruang Guru (bisa pilih materi, nanti ada sub-sub materi), 
+Brilliant.com (video animation di materi),
+GeeksforGeeks.com (versi advanced)
+
+Materi pembelajaran fully dari Bitula, bisa berupa:
+- notes (text dan gambar)
+- video animation
+- quizzes
+
+

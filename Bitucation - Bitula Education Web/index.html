@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bitucation — Learn with Bitula</title>
+  <meta name="description" content="Free Computer Science and Math learning platform with Bitula, your favorite edu-VTuber. Algorithms, Data Structures, ML, Cloud, and more!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="IMAGE ASSET/BITULA FULL LOGO.png" alt="Bitula Logo" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-i18n="nav.about">Meet Bitula</a></li>
+        <li><a href="dashboard.html" class="nav-link" data-i18n="nav.lessons">Lessons</a></li>
+        <li><a href="login.html" class="nav-link nav-btn-login" data-i18n="nav.login">Login</a></li>
+        <li><button class="nav-lang-toggle" onclick="toggleLanguage()">繁中</button></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-particles" id="hero-particles"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge" data-i18n="hero.badge">✦ Free Learning Platform</div>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title.line1">Learn</span> <span class="gradient-text" data-i18n="hero.title.highlight">Computer Science</span><br/>
+          <span data-i18n="hero.title.line2">with Bitula!</span>
+        </h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+          A free learning platform for everyone. From coding fundamentals and algorithms to Machine Learning, guided by Bitula, your favorite edu-VTuber! 🌙
+        </p>
+        <div class="hero-cta">
+          <a href="dashboard.html" class="btn-primary" id="hero-cta-start">
+            <span data-i18n="hero.cta.start">Start Learning</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="about.html" class="btn-secondary" id="hero-cta-about" data-i18n="hero.cta.about">Meet Bitula</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-i18n="hero.stat1.num">50+</span>
+            <span class="stat-label" data-i18n="hero.stat1.label">Topics</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-i18n="hero.stat2.num">7</span>
+            <span class="stat-label" data-i18n="hero.stat2.label">Categories</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-i18n="hero.stat3.num">100%</span>
+            <span class="stat-label" data-i18n="hero.stat3.label">Free</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-glow"></div>
+        <img src="IMAGE ASSET/BITULA1.png" alt="Bitula Character" class="hero-character" id="hero-char" />
+        <div class="hero-speech-bubble">
+          <p data-i18n="hero.bubble">"Hey! I'm Bitula~ Let's learn together! Knowledge is power! ✨"</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8f6ff"/></svg>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories section-pad" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="cat.badge">📚 What You Can Learn</span>
+        <h2 class="section-title"><span data-i18n="cat.title.pre">Choose Your</span> <span class="gradient-text" data-i18n="cat.title.highlight">Category</span></h2>
+        <p class="section-sub" data-i18n="cat.sub">From beginner to advanced, all free!</p>
+      </div>
+      <div class="categories-grid">
+        <a href="dashboard.html?cat=fundamental" class="category-card" id="cat-fundamental">
+          <div class="cat-icon">⚡</div>
+          <h3 data-i18n="cat.fundamental.title">Coding Fundamentals</h3>
+          <p data-i18n="cat.fundamental.desc">Logic, Algorithms, Data Structures, and core programming concepts</p>
+          <span class="cat-count">12 Lessons</span>
+        </a>
+        <a href="dashboard.html?cat=math" class="category-card" id="cat-math">
+          <div class="cat-icon">∑</div>
+          <h3 data-i18n="cat.math.title">Mathematics</h3>
+          <p data-i18n="cat.math.desc">Calculus, Probability, Statistics, and Linear Algebra</p>
+          <span class="cat-count">8 Lessons</span>
+        </a>
+        <a href="dashboard.html?cat=cs-advanced" class="category-card" id="cat-cs">
+          <div class="cat-icon">🖥️</div>
+          <h3 data-i18n="cat.cs.title">CS Advanced</h3>
+          <p data-i18n="cat.cs.desc">OS, Computer Networks, Databases, Digital Logic</p>
+          <span class="cat-count">10 Lessons</span>
+        </a>
+        <a href="dashboard.html?cat=ml" class="category-card" id="cat-ml">
+          <div class="cat-icon">🧠</div>
+          <h3 data-i18n="cat.ml.title">ML &amp; Data Science</h3>
+          <p data-i18n="cat.ml.desc">Neural Networks, Deep Learning, and Data Analysis</p>
+          <span class="cat-count">9 Lessons</span>
+        </a>
+        <a href="dashboard.html?cat=data-eng" class="category-card" id="cat-data">
+          <div class="cat-icon">🔧</div>
+          <h3 data-i18n="cat.data.title">Data Engineering</h3>
+          <p data-i18n="cat.data.desc">Data Pipelines, Data Warehouses, ETL Process</p>
+          <span class="cat-count">6 Lessons</span>
+        </a>
+        <a href="dashboard.html?cat=cloud" class="category-card" id="cat-cloud">
+          <div class="cat-icon">☁️</div>
+          <h3 data-i18n="cat.cloud.title">Cloud Computing</h3>
+          <p data-i18n="cat.cloud.desc">AWS, Azure, GCP — all major cloud platforms</p>
+          <span class="cat-count">7 Lessons</span>
+        </a>
+        <a href="dashboard.html?cat=bigdata" class="category-card" id="cat-bigdata">
+          <div class="cat-icon">📊</div>
+          <h3 data-i18n="cat.bigdata.title">Big Data</h3>
+          <p data-i18n="cat.bigdata.desc">Hadoop, Spark, and other Big Data technologies</p>
+          <span class="cat-count">5 Lessons</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works section-pad" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="how.badge">🌙 How Bitucation Works</span>
+        <h2 class="section-title"><span data-i18n="how.title.pre">Learn in Just</span> <span class="gradient-text" data-i18n="how.title.highlight">3 Steps</span></h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-icon">🔍</div>
+          <h3 data-i18n="how.step1.title">Pick a Topic</h3>
+          <p data-i18n="how.step1.desc">Choose what you want to learn from our wide range of categories</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-icon">📖</div>
+          <h3 data-i18n="how.step2.title">Learn with Bitula</h3>
+          <p data-i18n="how.step2.desc">Follow along with notes and Bitula's explanations</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-icon">🏆</div>
+          <h3 data-i18n="how.step3.title">Take the Quiz</h3>
+          <p data-i18n="how.step3.desc">Test your understanding with interactive quizzes and keep your streak!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BITULA SAYS -->
+  <section class="bitula-says section-pad" id="bitula-says">
+    <div class="container">
+      <div class="bitula-says-card">
+        <img src="IMAGE ASSET/BITULA4.png" alt="Bitula" class="bitula-says-img" />
+        <div class="bitula-says-content">
+          <span class="section-badge" data-i18n="says.badge">💬 Bitula Says...</span>
+          <blockquote class="bitula-quote" id="bitula-quote">
+            "Knowledge is the most powerful weapon you can use to change the world. One line of code today could be the solution for millions tomorrow."
+          </blockquote>
+          <p class="bitula-quote-attr" data-i18n="says.attr">— Bitula ✦</p>
+          <button class="btn-ghost" id="next-quote-btn" onclick="nextQuote()" data-i18n="says.next">Next quote ✦</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPIC OF THE DAY -->
+  <section class="topic-day section-pad" id="topic-day">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="tod.badge">🌟 Topic of the Day</span>
+        <h2 class="section-title"><span data-i18n="tod.title.pre">Today's</span> <span class="gradient-text" data-i18n="tod.title.highlight">Topic</span></h2>
+      </div>
+      <div class="topic-day-card">
+        <div class="topic-day-badge" data-i18n="tod.card.badge">Today's Pick</div>
+        <h3 class="topic-day-title" data-i18n="tod.lesson.title">Algorithm: Big-O Notation</h3>
+        <p class="topic-day-desc" data-i18n="tod.lesson.desc">Understanding time and space complexity is key to becoming a great programmer. Learn how to measure your code's efficiency!</p>
+        <div class="topic-day-meta">
+          <span class="tag" data-i18n="tod.tag1">⚡ Fundamental</span>
+          <span class="tag" data-i18n="tod.tag2">⏱ 20 min</span>
+          <span class="tag" data-i18n="tod.tag3">🔰 Beginner</span>
+        </div>
+        <a href="lesson.html?id=big-o-notation" class="btn-primary" id="topic-day-cta" data-i18n="tod.cta">Study Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="IMAGE ASSET/BELAJAR BARENG BITULA LOGO.png" alt="Belajar Bareng Bitula" class="footer-logo" />
+          <p data-i18n="footer.desc">Free Computer Science and Math learning platform with Bitula VTuber!</p>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer.lessons">Lessons</h4>
+          <ul>
+            <li><a href="dashboard.html?cat=fundamental" data-i18n="cat.fundamental.title">Coding Fundamentals</a></li>
+            <li><a href="dashboard.html?cat=math" data-i18n="cat.math.title">Mathematics</a></li>
+            <li><a href="dashboard.html?cat=cs-advanced" data-i18n="cat.cs.title">CS Advanced</a></li>
+            <li><a href="dashboard.html?cat=ml" data-i18n="cat.ml.title">ML &amp; Data Science</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer.platform">Platform</h4>
+          <ul>
+            <li><a href="about.html" data-i18n="nav.about">Meet Bitula</a></li>
+            <li><a href="login.html" data-i18n="nav.login">Login</a></li>
+            <li><a href="dashboard.html" data-i18n="nav.lessons">Lessons</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer.follow">Follow Bitula</h4>
+          <ul>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Twitter / X</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">© 2025 Bitucation — Made with 💜 by Rae</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/lang.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

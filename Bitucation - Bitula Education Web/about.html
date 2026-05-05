@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet Bitula — Bitucation</title>
+  <meta name="description"
+    content="Get to know Bitula! A Computer Science and Math edu-VTuber. Learn about Bitula's story and the vision behind Bitucation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="IMAGE ASSET/BITULA FULL LOGO.png" alt="Bitula Logo" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" class="nav-link active" data-i18n="nav.about">Meet Bitula</a></li>
+        <li><a href="dashboard.html" class="nav-link" data-i18n="nav.lessons">Lessons</a></li>
+        <li><a href="login.html" class="nav-link nav-btn-login" data-i18n="nav.login">Login</a></li>
+        <li><button class="nav-lang-toggle" onclick="toggleLanguage()">繁中</button></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero section-pad">
+    <div class="hero-particles" id="hero-particles"></div>
+    <div class="container">
+      <div class="about-hero-grid">
+        <div class="about-hero-text">
+          <div class="section-badge" data-i18n="about.badge">🌙 Get to Know Bitula</div>
+          <h1 class="section-title"><span data-i18n="about.h1.pre">Hey, I'm</span> <span class="gradient-text"
+              data-i18n="about.h1.highlight">Bitula!</span></h1>
+          <p class="about-lead" data-i18n="about.lead">
+            I'm a VTuber focused on teaching <strong>Computer Science</strong> and <strong>Mathematics</strong>. I
+            believe knowledge should be accessible to everyone, free, fun, and full of energy!
+          </p>
+          <p class="about-body" data-i18n="about.body">
+            With a Cybertech style and an undying love for learning, I'm here to guide you on your journey, from knowing
+            nothing to becoming an expert!
+          </p>
+          <div class="about-tags">
+            <span class="tag">🖤 Cybertech VTuber</span>
+            <span class="tag">💻 Computer Science</span>
+            <span class="tag">∑ Mathematics</span>
+            <span class="tag">🧠 AI &amp; ML</span>
+          </div>
+        </div>
+        <div class="about-hero-visual">
+          <div class="about-char-container">
+            <div class="about-char-glow"></div>
+            <img src="IMAGE ASSET/BITULA3.png" alt="Bitula reading a book" class="about-char-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LORE -->
+  <section class="lore-section section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge" data-i18n="about.lore.badge">📜 Bitula's Lore</span>
+        <h2 class="section-title"><span data-i18n="about.lore.title.pre">Who is</span> <span class="gradient-text"
+            data-i18n="about.lore.title.highlight">Bitula</span> <span data-i18n="about.lore.title.post">Really?</span>
+        </h2>
+      </div>
+      <div class="lore-grid">
+        <div class="lore-card" id="lore-origin">
+          <div class="lore-icon">🌌</div>
+          <h3 data-i18n="about.lore1.title">Origin</h3>
+          <p data-i18n="about.lore1.desc">Bitula comes from a dimension where knowledge and cyber magic intertwine. She
+            arrived in this world with one mission: to spread Computer Science to everyone.</p>
+        </div>
+        <div class="lore-card" id="lore-power">
+          <div class="lore-icon">⚡</div>
+          <h3 data-i18n="about.lore2.title">Power</h3>
+          <p data-i18n="about.lore2.desc">Bitula's ability lies in turning complex technical concepts into
+            easy-to-understand stories. She can "read" code like a wizard reading a spell.</p>
+        </div>
+        <div class="lore-card" id="lore-mission">
+          <div class="lore-icon">🎯</div>
+          <h3 data-i18n="about.lore3.title">Mission</h3>
+          <p data-i18n="about.lore3.desc">To prove that anyone can learn programming and math, regardless of background,
+            age, or experience. Knowledge is for everyone.</p>
+        </div>
+        <div class="lore-card" id="lore-style">
+          <div class="lore-icon">🌙</div>
+          <h3 data-i18n="about.lore4.title">Aesthetic</h3>
+          <p data-i18n="about.lore4.desc">Cyber Sci-Fi with magenta, pink, and purple. Bitula believes learning should
+            be stylish! Her crystal crown and black robe symbolize intellectual elegance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONALITY -->
+  <section class="personality-section section-pad" style="background: var(--bg-soft)">
+    <div class="container">
+      <div class="personality-grid">
+        <div class="personality-char">
+          <img src="IMAGE ASSET/BITULA1.png" alt="Bitula happy" class="personality-img" />
+        </div>
+        <div class="personality-content">
+          <span class="section-badge" data-i18n="about.personality.badge">💜 Bitula's Personality</span>
+          <h2 class="section-title"><span data-i18n="about.personality.title">Energetic, Smart,</span><br /><span
+              class="gradient-text" data-i18n="about.personality.highlight">and Supportive!</span></h2>
+          <div class="personality-traits">
+            <div class="trait">
+              <span class="trait-icon">😄</span>
+              <div>
+                <strong data-i18n="about.trait1.title">Enthusiastic</strong>
+                <p data-i18n="about.trait1.desc">Always upbeat and positive! Bitula believes everyone can succeed with
+                  the right effort.</p>
+              </div>
+            </div>
+            <div class="trait">
+              <span class="trait-icon">🧪</span>
+              <div>
+                <strong data-i18n="about.trait2.title">Analytical</strong>
+                <p data-i18n="about.trait2.desc">Loves breaking complex problems into small, digestible pieces.</p>
+              </div>
+            </div>
+            <div class="trait">
+              <span class="trait-icon">🌸</span>
+              <div>
+                <strong data-i18n="about.trait3.title">Supportive</strong>
+                <p data-i18n="about.trait3.desc">Never judgmental if you don't get it yet. Bitula stays by your side
+                  until it clicks!</p>
+              </div>
+            </div>
+            <div class="trait">
+              <span class="trait-icon">✨</span>
+              <div>
+                <strong data-i18n="about.trait4.title">Creative</strong>
+                <p data-i18n="about.trait4.desc">Uses analogies, stories, and unique visuals to explain technical
+                  concepts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section class="vision-section section-pad">
+    <div class="container">
+      <div class="vision-card">
+        <div class="vision-content">
+          <span class="section-badge" data-i18n="about.vision.badge">🔭 Vision and Mission</span>
+          <h2 class="section-title"><span data-i18n="about.vision.title.pre">Why</span> <span class="gradient-text"
+              data-i18n="about.vision.title.highlight">Bitucation</span><span
+              data-i18n="about.vision.title.post">?</span></h2>
+          <div class="vision-points">
+            <div class="vision-point">
+              <div class="vision-num">01</div>
+              <div>
+                <h4 data-i18n="about.v1.title">Educational Accessibility</h4>
+                <p data-i18n="about.v1.desc">High-quality CS and Math content should be accessible to everyone, not just
+                  those who can afford expensive courses.</p>
+              </div>
+            </div>
+            <div class="vision-point">
+              <div class="vision-num">02</div>
+              <div>
+                <h4 data-i18n="about.v2.title">Fun Learning</h4>
+                <p data-i18n="about.v2.desc">With a VTuber approach and gamification (streaks, quizzes), studying
+                  becomes an adventure, not a burden!</p>
+              </div>
+            </div>
+            <div class="vision-point">
+              <div class="vision-num">03</div>
+              <div>
+                <h4 data-i18n="about.v3.title">A Supportive Community</h4>
+                <p data-i18n="about.v3.desc">Building a learner community that supports each other, shares knowledge,
+                  and grows together.</p>
+              </div>
+            </div>
+          </div>
+          <a href="dashboard.html" class="btn-primary" id="about-cta" data-i18n="about.cta">Start Learning Now →</a>
+        </div>
+        <div class="vision-visual">
+          <img src="IMAGE ASSET/BITULA5.png" alt="Bitula vision" class="vision-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="IMAGE ASSET/BELAJAR BARENG BITULA LOGO.png" alt="Belajar Bareng Bitula" class="footer-logo" />
+          <p data-i18n="footer.desc">Free Computer Science and Math learning platform with Bitula VTuber!</p>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer.lessons">Lessons</h4>
+          <ul>
+            <li><a href="dashboard.html?cat=fundamental" data-i18n="cat.fundamental.title">Coding Fundamentals</a></li>
+            <li><a href="dashboard.html?cat=math" data-i18n="cat.math.title">Mathematics</a></li>
+            <li><a href="dashboard.html?cat=cs-advanced" data-i18n="cat.cs.title">CS Advanced</a></li>
+            <li><a href="dashboard.html?cat=ml" data-i18n="cat.ml.title">ML &amp; Data Science</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer.platform">Platform</h4>
+          <ul>
+            <li><a href="about.html" data-i18n="nav.about">Meet Bitula</a></li>
+            <li><a href="login.html" data-i18n="nav.login">Login</a></li>
+            <li><a href="dashboard.html" data-i18n="nav.lessons">Lessons</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer.follow">Follow Bitula</h4>
+          <ul>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Twitter / X</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">© 2025 Bitucation — Made with 💜 by Rae</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/lang.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

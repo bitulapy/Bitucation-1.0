@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="lesson-page-title">Materi — Bitucation</title>
+  <meta name="description" content="Pelajari Computer Science bersama Bitula di Bitucation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/lesson.css" />
+</head>
+<body>
+
+  <!-- READING PROGRESS BAR -->
+  <div class="reading-progress-bar" id="reading-progress"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="IMAGE ASSET/BITULA FULL LOGO.png" alt="Bitula Logo" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-i18n="nav.about">Meet Bitula</a></li>
+        <li><a href="dashboard.html" class="nav-link active" data-i18n="nav.lessons">Lessons</a></li>
+        <li><a href="login.html" class="nav-link nav-btn-login" data-i18n="nav.login">Login</a></li>
+        <li><button class="nav-lang-toggle" onclick="toggleLanguage()">繁中</button></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- LESSON CONTENT -->
+  <main class="lesson-main" id="lesson-main">
+    <div class="lesson-layout">
+
+      <!-- SIDEBAR -->
+      <aside class="lesson-sidebar" id="lesson-sidebar">
+        <div class="sidebar-inner">
+          <a href="dashboard.html" class="sidebar-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Kembali
+          </a>
+          <div class="sidebar-cat" id="sidebar-cat"></div>
+          <h2 class="sidebar-title" id="sidebar-title">Memuat...</h2>
+          <nav class="sidebar-toc" id="sidebar-toc"></nav>
+          <div class="sidebar-bitula">
+            <img src="IMAGE ASSET/BITULA3.png" alt="Bitula" class="sidebar-char" />
+            <p id="sidebar-tip">Gunakan TOC di atas untuk navigasi materi!</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <div class="lesson-content-area">
+        <!-- LESSON HEADER -->
+        <div class="lesson-header" id="lesson-header">
+          <div class="lesson-header-meta" id="lesson-header-meta"></div>
+          <h1 class="lesson-content-title" id="lesson-content-title">Memuat Materi...</h1>
+          <div class="lesson-header-tags" id="lesson-header-tags"></div>
+        </div>
+
+        <!-- BITULA INTRO BOX -->
+        <div class="bitula-intro-box" id="bitula-intro-box">
+          <img src="IMAGE ASSET/BITULA1.png" alt="Bitula" class="intro-char" />
+          <div class="intro-content">
+            <strong>Bitula Says:</strong>
+            <p id="bitula-intro-text">Yuk kita mulai belajar!</p>
+          </div>
+        </div>
+
+        <!-- LESSON BODY -->
+        <div class="lesson-body" id="lesson-body">
+          <div class="loader">Memuat materi...</div>
+        </div>
+
+        <!-- QUIZ SECTION -->
+        <div class="quiz-section" id="quiz-section" style="display:none;">
+          <div class="quiz-header">
+            <span class="quiz-badge">🎯 Quiz Waktu!</span>
+            <h2>Uji Pemahamanmu</h2>
+            <p>Jawab soal-soal berikut untuk mengecek pemahaman kamu. Jawab semua dulu ya sebelum submit!</p>
+          </div>
+          <form id="quiz-form" class="quiz-form"></form>
+          <button class="btn-primary" id="quiz-submit" onclick="submitQuiz()">
+            <span>Submit Jawaban</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <div id="quiz-result"></div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div class="lesson-nav-bottom" id="lesson-nav-bottom">
+          <a href="dashboard.html" class="btn-secondary" id="btn-back-dash">← Semua Materi</a>
+          <div id="lesson-next-btns"></div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/lang.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/lessons-data.js"></script>
+  <script src="js/lesson.js"></script>
+</body>
+</html>

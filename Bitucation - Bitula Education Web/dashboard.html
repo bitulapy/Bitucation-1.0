@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lessons — Bitucation</title>
+  <meta name="description" content="Browse all Computer Science and Math lessons taught by Bitula. Choose a topic and start learning today!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="IMAGE ASSET/BITULA FULL LOGO.png" alt="Bitula Logo" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" class="nav-link" data-i18n="nav.about">Meet Bitula</a></li>
+        <li><a href="dashboard.html" class="nav-link active" data-i18n="nav.lessons">Lessons</a></li>
+        <li><a href="login.html" class="nav-link nav-btn-login" data-i18n="nav.login">Login</a></li>
+        <li><button class="nav-lang-toggle" onclick="toggleLanguage()">繁中</button></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="dash-header">
+    <div class="container">
+      <div class="dash-header-content">
+        <div class="dash-header-text">
+          <div class="section-badge" data-i18n="dash.badge">📚 All Lessons</div>
+          <h1 class="section-title"><span data-i18n="dash.title.pre">Choose Your</span> <span class="gradient-text" data-i18n="dash.title.highlight">Lesson</span></h1>
+          <p class="section-sub" data-i18n="dash.sub">Start anywhere, all free and available anytime!</p>
+        </div>
+        <div class="streak-card" id="streak-card">
+          <div class="streak-icon">🔥</div>
+          <div class="streak-info">
+            <span class="streak-count" id="streak-display">0</span>
+            <span class="streak-label" data-i18n="dash.streak.label">Day Streak</span>
+          </div>
+          <div class="streak-calendar" id="streak-calendar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="filter-bar">
+    <div class="container">
+      <div class="filter-inner">
+        <button class="filter-btn active" data-cat="all" onclick="filterCategory('all', this)" data-i18n="dash.filter.all">All</button>
+        <button class="filter-btn" data-cat="fundamental" onclick="filterCategory('fundamental', this)">⚡ Fundamentals</button>
+        <button class="filter-btn" data-cat="math" onclick="filterCategory('math', this)">∑ Math</button>
+        <button class="filter-btn" data-cat="cs-advanced" onclick="filterCategory('cs-advanced', this)">🖥️ CS Advanced</button>
+        <button class="filter-btn" data-cat="ml" onclick="filterCategory('ml', this)">🧠 ML &amp; Data Science</button>
+        <button class="filter-btn" data-cat="data-eng" onclick="filterCategory('data-eng', this)">🔧 Data Engineering</button>
+        <button class="filter-btn" data-cat="cloud" onclick="filterCategory('cloud', this)">☁️ Cloud</button>
+        <button class="filter-btn" data-cat="bigdata" onclick="filterCategory('bigdata', this)">📊 Big Data</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="lessons-section section-pad">
+    <div class="container">
+      <div class="lessons-grid" id="lessons-grid">
+
+        <a href="lesson.html?id=algo-ds-intro" class="lesson-card" data-cat="fundamental" id="lesson-algo-ds">
+          <div class="lesson-card-top">
+            <span class="lesson-cat-badge fundamental">⚡ Fundamental</span>
+            <span class="lesson-difficulty beginner">🔰 Beginner</span>
+          </div>
+          <div class="lesson-icon">🔗</div>
+          <h3 class="lesson-title">Algorithm &amp; Data Structure Introduction</h3>
+          <p class="lesson-desc">The most important foundation in Computer Science. Learn what algorithms and data structures are and why they matter.</p>
+          <div class="lesson-meta">
+            <span>⏱ 25 min</span>
+            <span>📝 Quiz included</span>
+          </div>
+          <div class="lesson-progress-bar"><div class="lesson-progress-fill" style="width: 0%"></div></div>
+        </a>
+
+        <a href="lesson.html?id=big-o-notation" class="lesson-card" data-cat="fundamental" id="lesson-bigo">
+          <div class="lesson-card-top">
+            <span class="lesson-cat-badge fundamental">⚡ Fundamental</span>
+            <span class="lesson-difficulty beginner">🔰 Beginner</span>
+          </div>
+          <div class="lesson-icon">📈</div>
+          <h3 class="lesson-title">Big-O Notation &amp; Complexity Analysis</h3>
+          <p class="lesson-desc">Measure algorithm efficiency and understand time and space complexity with Big-O Notation.</p>
+          <div class="lesson-meta">
+            <span>⏱ 20 min</span>
+            <span>📝 Quiz included</span>
+          </div>
+          <div class="lesson-progress-bar"><div class="lesson-progress-fill" style="width: 0%"></div></div>
+        </a>
+
+        <a href="lesson.html?id=sorting-algorithms" class="lesson-card" data-cat="fundamental" id="lesson-sort">
+          <div class="lesson-card-top">
+            <span class="lesson-cat-badge fundamental">⚡ Fundamental</span>
+            <span class="lesson-difficulty intermediate">⚔️ Intermediate</span>
+          </div>
+          <div class="lesson-icon">🔀</div>
+          <h3 class="lesson-title">Sorting Algorithms</h3>
+          <p class="lesson-desc">Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort. Learn them one by one!</p>
+          <div class="lesson-meta">
+            <span>⏱ 35 min</span>
+            <span>📝 Quiz included</span>
+          </div>
+          <div class="lesson-progress-bar"><div class="lesson-progress-fill" style="width: 0%"></div></div>
+        </a>
+
+        <a href="lesson.html?id=logic-and-proof" class="lesson-card" data-cat="math" id="lesson-logic">
+          <div class="lesson-card-top">
+            <span class="lesson-cat-badge math">∑ Math</span>
+            <span class="lesson-difficulty beginner">🔰 Beginner</span>
+          </div>
+          <div class="lesson-icon">🧮</div>
+          <h3 class="lesson-title">Logic &amp; Mathematical Proof</h3>
+          <p class="lesson-desc">Foundations of mathematical logic: propositions, tautologies, contradictions, and proof techniques.</p>
+          <div class="lesson-meta">
+            <span>⏱ 30 min</span>
+            <span>📝 Quiz included</span>
+          </div>
+          <div class="lesson-progress-bar"><div class="lesson-progress-fill" style="width: 0%"></div></div>
+        </a>
+
+        <a href="lesson.html?id=graph-theory" class="lesson-card" data-cat="cs-advanced" id="lesson-graph">
+          <div class="lesson-card-top">
+            <span class="lesson-cat-badge cs-advanced">🖥️ CS Advanced</span>
+            <span class="lesson-difficulty intermediate">⚔️ Intermediate</span>
+          </div>
+          <div class="lesson-icon">🕸️</div>
+          <h3 class="lesson-title">Graph Theory &amp; BFS/DFS</h3>
+          <p class="lesson-desc">Understand graph structures, BFS and DFS traversal, and their real-world applications.</p>
+          <div class="lesson-meta">
+            <span>⏱ 40 min</span>
+            <span>📝 Quiz included</span>
+          </div>
+          <div class="lesson-progress-bar"><div class="lesson-progress-fill" style="width: 0%"></div></div>
+        </a>
+
+        <div class="lesson-card coming-soon" data-cat="ml">
+          <div class="lesson-card-top">
+            <span class="lesson-cat-badge ml">🧠 ML &amp; Data Science</span>
+            <span class="lesson-difficulty advanced">🔴 Advanced</span>
+          </div>
+          <div class="lesson-icon">🤖</div>
+          <h3 class="lesson-title">Neural Network Fundamentals</h3>
+          <p class="lesson-desc">Introduction to artificial neural networks, activation functions, and forward propagation.</p>
+          <div class="coming-soon-overlay" data-i18n="lesson.coming.soon">🔜 Coming Soon</div>
+        </div>
+
+        <div class="lesson-card coming-soon" data-cat="data-eng">
+          <div class="lesson-card-top">
+            <span class="lesson-cat-badge data-eng">🔧 Data Engineering</span>
+            <span class="lesson-difficulty intermediate">⚔️ Intermediate</span>
+          </div>
+          <div class="lesson-icon">🛠️</div>
+          <h3 class="lesson-title">ETL Pipeline Design</h3>
+          <p class="lesson-desc">The concept of Extract, Transform, Load in building efficient data pipelines.</p>
+          <div class="coming-soon-overlay" data-i18n="lesson.coming.soon">🔜 Coming Soon</div>
+        </div>
+
+        <div class="lesson-card coming-soon" data-cat="cloud">
+          <div class="lesson-card-top">
+            <span class="lesson-cat-badge cloud">☁️ Cloud</span>
+            <span class="lesson-difficulty beginner">🔰 Beginner</span>
+          </div>
+          <div class="lesson-icon">☁️</div>
+          <h3 class="lesson-title">Introduction to Cloud Computing</h3>
+          <p class="lesson-desc">What is the cloud? IaaS, PaaS, SaaS — and why every company is migrating to cloud infrastructure.</p>
+          <div class="coming-soon-overlay" data-i18n="lesson.coming.soon">🔜 Coming Soon</div>
+        </div>
+
+        <div class="lesson-card coming-soon" data-cat="bigdata">
+          <div class="lesson-card-top">
+            <span class="lesson-cat-badge bigdata">📊 Big Data</span>
+            <span class="lesson-difficulty intermediate">⚔️ Intermediate</span>
+          </div>
+          <div class="lesson-icon">🐘</div>
+          <h3 class="lesson-title">Introduction to Hadoop</h3>
+          <p class="lesson-desc">The Hadoop ecosystem, HDFS, MapReduce, and why Big Data needs distributed computing.</p>
+          <div class="coming-soon-overlay" data-i18n="lesson.coming.soon">🔜 Coming Soon</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="dash-cta section-pad">
+    <div class="container">
+      <div class="dash-cta-card">
+        <img src="IMAGE ASSET/BITULA2.png" alt="Bitula" class="dash-cta-char" />
+        <div class="dash-cta-text">
+          <h2 data-i18n="dash.cta.quote">"Start with one small step. I'll always be here with you! 🌙"</h2>
+          <p data-i18n="dash.cta.sub">Pick a topic above and start your learning journey today!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="IMAGE ASSET/BELAJAR BARENG BITULA LOGO.png" alt="Belajar Bareng Bitula" class="footer-logo" />
+          <p data-i18n="footer.desc">Free Computer Science and Math learning platform with Bitula VTuber!</p>
+        </div>
+        <div class="footer-links-group"><h4 data-i18n="footer.lessons">Lessons</h4><ul>
+          <li><a href="dashboard.html?cat=fundamental" data-i18n="cat.fundamental.title">Coding Fundamentals</a></li>
+          <li><a href="dashboard.html?cat=math" data-i18n="cat.math.title">Mathematics</a></li>
+          <li><a href="dashboard.html?cat=cs-advanced" data-i18n="cat.cs.title">CS Advanced</a></li>
+          <li><a href="dashboard.html?cat=ml" data-i18n="cat.ml.title">ML &amp; Data Science</a></li>
+        </ul></div>
+        <div class="footer-links-group"><h4 data-i18n="footer.platform">Platform</h4><ul>
+          <li><a href="about.html" data-i18n="nav.about">Meet Bitula</a></li>
+          <li><a href="login.html" data-i18n="nav.login">Login</a></li>
+          <li><a href="dashboard.html" data-i18n="nav.lessons">Lessons</a></li>
+        </ul></div>
+        <div class="footer-links-group"><h4 data-i18n="footer.follow">Follow Bitula</h4><ul>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom"><p data-i18n="footer.copy">© 2025 Bitucation — Made with 💜 by Rae</p></div>
+    </div>
+  </footer>
+
+  <script src="js/lang.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
